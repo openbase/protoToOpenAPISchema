@@ -237,7 +237,7 @@ def protoToOpenAPISchema(protoFile, schemaPrefix):
     :return: a dictionary with schemas referenced by their name.
     """
     schemas = {}
-    with open(protoFile, 'r') as f:
+    with open(str(protoFile), 'r') as f:
         protoToOpenAPISchemaRecursive(f.readlines(), schemas, schemaPrefix, '')
     return schemas
 
